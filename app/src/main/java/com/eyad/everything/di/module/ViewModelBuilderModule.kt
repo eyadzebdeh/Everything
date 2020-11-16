@@ -1,7 +1,7 @@
-package com.eyad.everything.di.modules
+package com.eyad.everything.di.module
 
 import androidx.lifecycle.ViewModel
-import com.eyad.everything.di.annotations.ViewModelKey
+import com.eyad.everything.di.annotation.ViewModelKey
 import com.eyad.everything.di.factory.ViewModelFactory
 import com.eyad.everything.di.factory.ViewModelFactoryImpl
 import com.eyad.everything.presentation.main.MainViewModel

@@ -1,4 +1,4 @@
-package com.eyad.everything.di.annotations
+package com.eyad.everything.di.annotation
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

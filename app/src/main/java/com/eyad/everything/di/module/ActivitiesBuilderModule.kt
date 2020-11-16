@@ -1,6 +1,7 @@
-package com.eyad.everything.di.modules
+package com.eyad.everything.di.module
 
 import com.eyad.everything.presentation.main.MainActivity
+import com.eyad.everything.presentation.main.WrongKeyActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -9,5 +10,8 @@ abstract class ActivitiesBuilderModule{
 
     @ContributesAndroidInjector
     abstract fun bindMainActivity(): MainActivity
+
+    @ContributesAndroidInjector
+    abstract fun bindWrongKeyActivity(): WrongKeyActivity
 
 }
