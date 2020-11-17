@@ -1,9 +1,7 @@
 package com.eyad.everything.di
 
 import android.content.Context
-import com.eyad.everything.di.module.ActivitiesBuilderModule
-import com.eyad.everything.di.module.NetworkModule
-import com.eyad.everything.di.module.ViewModelBuilderModule
+import com.eyad.everything.di.module.*
 import com.eyad.everything.presentation.base.BaseApplication
 import dagger.BindsInstance
 import dagger.Component
@@ -18,6 +16,8 @@ import javax.inject.Singleton
         NetworkModule::class,
         ViewModelBuilderModule::class,
         ActivitiesBuilderModule::class,
+        FragmentsBuilderModule::class,
+        RepositoriesModule::class
     ]
 )
 interface ApplicationComponent : AndroidInjector<BaseApplication> {

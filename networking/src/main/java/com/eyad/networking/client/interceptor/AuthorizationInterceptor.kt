@@ -25,7 +25,8 @@ class AuthorizationInterceptor(
 
         if (apiMethod?.getAnnotation(ApiKey::class.java) != null) {
             if (apiKey != null && apiKey.isNotEmpty()) {
-                requestBuilder.addHeader(ApiKey.KEY_NAME, apiKey)
+                val url = request.url.newBuilder().addQueryParameter(ApiKey.KEY_NAME, apiKey).build()
+                requestBuilder.url(url)
             } else {
                 forceLogout()
             }

@@ -50,11 +50,9 @@ object NetworkModule {
     @Provides
     fun provideOkHttpClient(
         okHttpLoggingInterceptor: HttpLoggingInterceptor,
-        authorizationInterceptor: AuthorizationInterceptor,
-        certificatePinner: CertificatePinner,
+        authorizationInterceptor: AuthorizationInterceptor
     ): OkHttpClient {
         return OkHttpClient.Builder()
-            .certificatePinner(certificatePinner)
             .addInterceptor(authorizationInterceptor)
             .addInterceptor(okHttpLoggingInterceptor)
             .build()
